@@ -1,41 +1,30 @@
+<script setup>
+import HelloWorld from './components/HelloWorld.vue'
+</script>
+
 <template>
-  <v-app app>
-    <v-main style="overflow: hidden">
-      <navbarpc v-if="!isMobile"></navbarpc>
-      <navbarmobile v-if="isMobile"></navbarmobile>
-      <router-view />
-    </v-main>
-  </v-app>
+  <div>
+    <a href="https://vitejs.dev" target="_blank">
+      <img src="/vite.svg" class="logo" alt="Vite logo" />
+    </a>
+    <a href="https://vuejs.org/" target="_blank">
+      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+    </a>
+  </div>
+  <HelloWorld msg="Vite + Vue" />
 </template>
 
-<script lang="ts">
-import Vue from "vue";
-//import axios from "axios";
-import navbarpc from "./components/NavbarPC.vue";
-import navbarmobile from "./components/NavbarMobile.vue";
-
-export default Vue.extend({
-  components: {
-    navbarpc,
-    navbarmobile,
-  },
-  data() {
-    return {
-      info: {},
-    };
-  },
-  computed: {
-    isMobile() {
-      if (
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-          navigator.userAgent
-        )
-      ) {
-        return true;
-      } else {
-        return false;
-      }
-    },
-  },
-});
-</script>
+<style scoped>
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vue:hover {
+  filter: drop-shadow(0 0 2em #42b883aa);
+}
+</style>
