@@ -1,3 +1,17 @@
+<script setup lang="js">
+  import Menu from './components/menu.vue'
+</script>
+
 <template>
-  <router-view></router-view>
+  <Menu></Menu>
+  <div class="content">
+    <router-view></router-view>
+  </div>
 </template>
+
+<style lang="sass" scoped>
+  .content
+    width: 100%
+    display: flex
+    justify-content: center
+</style>
