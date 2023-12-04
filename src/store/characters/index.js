@@ -12,14 +12,13 @@ export const useCharactersStore = defineStore({
   getters: {},
   actions: {
     async getList(url = urls.character) {
-      const data = await getData(url)
-      this.next = data.info.next
-      this.list.push(...data.results)
+      const response = await getData(url)
+      this.next = response.info.next
+      this.list.push(...response.results)
     },
     async getData(url) {
-      const data = await getData(url)
-      this.next = data.info.next
-      this.list.push(...data.results)
+      const response = await getData(url)
+      this.data = response
     }
   } 
 })

@@ -4,7 +4,7 @@
   import { InfinityScroll } from '../../helpers/infinityScroll'
 
   /* components */
-  import elementCharacter from '../../components/character/card.vue'
+  import characterElement from '../../components/character/card.vue'
 
   const characters = useCharactersStore()
   const router = useRouter()
@@ -14,18 +14,22 @@
     characters.getList()
     IS.addInfinityScroll() 
   }
+
+  async function goToCard(name, url) {
+    
+  }
 </script>
 
 <template>
   <div class="content-character">
-    <elementCharacter
+    <characterElement
       v-for="item in characters.list"
       :location="item.location.name"
       :species="item.species"
       :image="item.image"
       :name="item.name"
       :key="item.id"
-      @click="router.push({ path: '/characterCard' })"
+      @click="router.push({ path: '/characterCard', query: { name: item.name, url: item.url } })"
     />
   </div>
 </template>

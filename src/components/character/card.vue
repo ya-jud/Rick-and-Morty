@@ -1,5 +1,5 @@
 <script setup lang="js">
-  import { defineProps, ref } from 'vue'
+  import { defineProps } from 'vue'
 
   const props = defineProps({
     name: {

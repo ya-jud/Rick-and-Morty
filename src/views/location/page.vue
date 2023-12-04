@@ -26,9 +26,10 @@
       :name="item.name"
       :url="item.url"
       :key="item.id"
-      @click="router.push({ path: '/locationCard' })"
+      
     />
   </div>
+  <!-- @click="router.push({ path: '/locationCard', query: { name: item.name, url: item.url } })" -->
 </template>
 
 <style lang="sass" scoped>

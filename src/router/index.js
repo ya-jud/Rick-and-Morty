@@ -18,7 +18,7 @@ const routes = [
   {
     path: '/characterCard', 
     name: 'Character Card',
-    component: () => import('../views/character/card.vue')
+    component: () => import('../views/character/cardPage.vue')
   },
   { 
     path: '/episodes', 
@@ -28,7 +28,7 @@ const routes = [
   {
     path: '/episodeCard', 
     name: 'Episode Card',
-    component: () => import('../views/episode/card.vue')
+    component: () => import('../views/episode/cardPage.vue')
   },
   { 
     path: '/locations', 
@@ -38,7 +38,7 @@ const routes = [
   {
     path: '/locationCard', 
     name: 'Location Card',
-    component: () => import('../views/location/card.vue')
+    component: () => import('../views/location/cardPage.vue')
   },
 ]
 

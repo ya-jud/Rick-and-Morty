@@ -7,6 +7,7 @@ export const useLocationsStore = defineStore({
     page: 0,
     next: null,
     list: [],
+    data: {}
   }),
   getters: {},
   actions: {
@@ -14,6 +15,10 @@ export const useLocationsStore = defineStore({
       const data = await getData(url)
       this.next = data.info.next
       this.list.push(...data.results)
+    },
+    async getData(url) {
+      const response = await getData(url)
+      this.data = response
     }
   } 
 })
