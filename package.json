@@ -1,0 +1,30 @@
+{
+  "name": "rick-and-morty",
+  "version": "1.0.0",
+  "description": "Project for demonstration",
+  "main": "./src/main.tsx",
+  "type": "module",
+  "scripts": {
+    "dev": "npx vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "author": "ya-jud",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@typescript-eslint/eslint-plugin": "^8.18.1",
+    "@typescript-eslint/parser": "^8.18.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "sass": "^1.83.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5",
+    "vite-tsconfig-paths": "^5.1.4"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
