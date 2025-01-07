@@ -1,13 +1,15 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import viteTsconfigPaths from 'vite-tsconfig-paths';
-import path from 'path';
+import {fileURLToPath} from "node:url";
 
 export default defineConfig({
   plugins: [react(), viteTsconfigPaths()],
+  assetsInclude: ["**/*.png", "**/*.jpg", "**/*.webp"],
   resolve: {
-    alias: {
-      '@/': `${path.resolve(__dirname, '')}/`
-    },
+    alias: [
+      { find: "@", replacement: fileURLToPath(new URL("./src", import.meta.url)) },
+      { find: "@public", replacement: fileURLToPath(new URL("./public", import.meta.url)) },
+    ],
   }
 });
