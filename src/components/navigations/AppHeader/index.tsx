@@ -1,5 +1,6 @@
 // Utilities
 import React from "react";
+import {getCharacters} from "@/ api";
 
 // Styles
 import "./styles.scss";
@@ -9,6 +10,10 @@ import Logo from "@/assets/images/logo.png";
 
 // Components
 import BaseImage from "@/components/_ui-kit/BaseImage";
+
+const getData = async () => {
+  await getCharacters();
+};
 
 const AppHeader: React.FC = () => {
   const logo = Logo as string;
@@ -23,8 +28,10 @@ const AppHeader: React.FC = () => {
         </div>
 
         <nav className="app-header__nav">
-          <ul>
-            <li></li>
+          <ul className="app-header__nav-list">
+            <li onClick={getData}>Characters</li>
+            <li>Planets</li>
+            <li>Episodes</li>
           </ul>
         </nav>
       </div>

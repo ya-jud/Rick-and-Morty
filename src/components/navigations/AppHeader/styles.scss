@@ -1,3 +1,32 @@
 .app-header {
-  height: 400px;
+  overflow: hidden;
+  outline: 1px solid red;
+  margin: 20px;
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+  }
+
+  &__logo {
+    position: relative;
+    height: 100%;
+    width: 300px;
+    cursor: pointer;
+    -webkit-user-select: none;
+  }
+
+  &__nav-list {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+
+    > li {
+      cursor: pointer;
+      -webkit-user-select: none;
+    }
+  }
 }

@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ES2021",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": ["ES2021", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
     "moduleResolution": "Node",
@@ -21,15 +21,17 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "baseUrl": "./",
+    "outDir": "./dist",
+    "rootDir": "./src",
     "paths": {
       "@/*": ["/src/*"]
     },
-    "types": ["vite/client"]
+    "types": ["vite/client", "@types/node"]
   },
   "ts-node": {
     "esm": true
   },
-  "include": ["src", "./src/index.d.ts"],
+  "include": ["src/**/*", "./src/types.d.ts"],
   "exclude": ["node_modules", "dist"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
