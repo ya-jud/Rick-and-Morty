@@ -20,16 +20,18 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["/src/*"]
+      "@/*": ["./*"],
+      "components/*": ["./src/components/*"],
+      "assets/*": ["./src/assets/*"]
     },
     "types": ["vite/client"]
   },
   "ts-node": {
     "esm": true
   },
-  "include": ["src", "./src/index.d.ts"],
+  "include": ["src", "./src/index.d.ts", "src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["node_modules", "dist"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

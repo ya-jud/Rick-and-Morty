@@ -20,7 +20,7 @@ const BaseImage: React.FC<IProps> = ({src, alt = "", fallback, ...rest}) => {
 
   const supportsWebP = useMemo(() => {
     const canvas = document.createElement("canvas");
-    return canvas.getContext && canvas.toDataURL("image/webp").indexOf("data:image/webp") === 0;
+    return canvas.getContext("2d") && canvas.toDataURL("image/webp").indexOf("data:image/webp") === 0;
   }, []);
 
   useEffect(() => {

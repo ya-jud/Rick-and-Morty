@@ -8,7 +8,7 @@ import "./styles.scss";
 import Logo from "@/assets/images/logo.png";
 
 // Components
-import BaseImage from "@/components/_ui-kit/BaseImage";
+import BaseImage from "components/_ui-kit/BaseImage";
 
 const AppHeader: React.FC = () => {
   const logo = Logo as string;
