@@ -23,8 +23,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "components/*": ["./src/components/*"],
-      "assets/*": ["./src/assets/*"]
+      "app/*": ["./src/app/*"],
+      "assets/*": ["./src/assets/*"],
+      "components/*": ["./src/components/*"]
     },
     "types": ["vite/client"]
   },

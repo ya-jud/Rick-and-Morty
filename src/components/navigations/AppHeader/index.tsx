@@ -5,7 +5,7 @@ import React from "react";
 import "./styles.scss";
 
 // Content
-import Logo from "@/assets/images/logo.png";
+import Logo from "assets/images/logo.png";
 
 // Components
 import BaseImage from "components/_ui-kit/BaseImage";

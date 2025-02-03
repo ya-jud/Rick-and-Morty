@@ -9,7 +9,7 @@ import React, {
 import "./styles.scss";
 
 // Content
-import DefaultImage from "@/assets/images/default.webp";
+import DefaultImage from "assets/images/default.webp";
 
 // Types
 import IProps from "./types.ts"

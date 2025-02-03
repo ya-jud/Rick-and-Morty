@@ -1,5 +1,5 @@
 // Components
-import AppHeader from "@/components/navigations/AppHeader";
+import AppHeader from "components/navigations/AppHeader";
 
 // Utilities
 import React from "react";
